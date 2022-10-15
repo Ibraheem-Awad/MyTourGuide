@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ProfileActivity"
+    tools:openDrawer="start"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/profile_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorAccent"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/profile_nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu"
+        android:layout_marginTop="16dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_mainLayout">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_tourist"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"
+            android:layout_marginTop="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/profile_icon_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_img"
+            app:layout_constraintVertical_bias="0.05"
+            app:srcCompat="@drawable/ic_username" />
+
+        <TextView
+            android:id="@+id/tv_profile_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/tv_profile_username"
+            android:fontFamily="@font/poppinsmedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_icon_user_name"
+            app:layout_constraintTop_toTopOf="@+id/profile_icon_user_name" />
+
+        <TextView
+            android:id="@+id/tv_profile_user_name_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/tv_profile_user_name_user"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppinsbold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_icon_user_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile_username" />
+
+
+
+        <ImageView
+            android:id="@+id/profile_icon_full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile_user_name_user"
+            app:layout_constraintVertical_bias="0.03"
+            app:srcCompat="@drawable/ic_name" />
+
+        <TextView
+            android:id="@+id/tv_profile_full_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/tv_profile_full_name"
+            android:fontFamily="@font/poppinsmedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_icon_full_name"
+            app:layout_constraintTop_toTopOf="@+id/profile_icon_full_name" />
+
+        <TextView
+            android:id="@+id/tv_profile_user_full_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/tv_profile_user_full_name"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppinsbold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_icon_full_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile_full_name" />
+
+
+
+        <ImageView
+            android:id="@+id/profile_icon_email_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile_user_full_name"
+            app:layout_constraintVertical_bias="0.03"
+            app:srcCompat="@drawable/ic_email" />
+
+        <TextView
+            android:id="@+id/tv_profile_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/tv_profile_email"
+            android:fontFamily="@font/poppinsmedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_icon_email_address"
+            app:layout_constraintTop_toTopOf="@+id/profile_icon_email_address" />
+
+        <TextView
+            android:id="@+id/tv_profile_user_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/tv_profile_user_email"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppinsbold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_icon_email_address"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile_email" />
+
+
+
+        <ImageView
+            android:id="@+id/profile_icon_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile_user_email"
+            app:layout_constraintVertical_bias="0.03"
+            app:srcCompat="@drawable/ic_phone" />
+
+        <TextView
+            android:id="@+id/tv_profile_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/tv_profile_phone"
+            android:fontFamily="@font/poppinsmedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_icon_phone"
+            app:layout_constraintTop_toTopOf="@+id/profile_icon_phone" />
+
+        <TextView
+            android:id="@+id/tv_profile_user_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/tv_profile_user_phone"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppinsbold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_icon_phone"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile_phone" />
+
+        <TextView
+            android:id="@+id/tv_profile_verifyMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/tv_profile_verifyMsg"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="#C2185B"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile_user_phone"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/btn_profile_verify_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/btn_profile_verify_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile_verifyMsg"
+            app:layout_constraintVertical_bias="0.59"
+            android:fontFamily="@font/poppinsmedium"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:backgroundTint="@color/colorAccent"
+            android:gravity="center|bottom"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/btn_profile_edit_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_profile_edit_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_profile_verify_email"
+            app:layout_constraintVertical_bias="0.59"
+            android:fontFamily="@font/poppinsmedium"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:backgroundTint="@color/colorAccent"
+            android:gravity="center|bottom"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/btn_profile_rest_pass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/btn_profile_rest_pass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_profile_edit_profile"
+            app:layout_constraintVertical_bias="0.59"
+            android:fontFamily="@font/poppinsmedium"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:backgroundTint="@color/colorAccent"
+            android:gravity="center|bottom"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/btn_profile_logout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/btn_profile_logout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_profile_rest_pass"
+            app:layout_constraintVertical_bias="0.59"
+            android:fontFamily="@font/poppinsmedium"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:backgroundTint="@color/colorAccent"
+            android:gravity="center|bottom"
+            android:textAllCaps="false"
+            android:visibility="visible"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "984680717924",
+    "project_id": "mytourguide-dd0ea",
+    "storage_bucket": "mytourguide-dd0ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984680717924:android:07a758df25fd0b4b598971",
+        "android_client_info": {
+          "package_name": "com.example.mytourguide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984680717924-h5e0l3voi02bo3a1ohb28pj4fm33q2bg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3FtaLHhzfAKtL9R2qG2Q54vyAG_36nQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984680717924-h5e0l3voi02bo3a1ohb28pj4fm33q2bg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
